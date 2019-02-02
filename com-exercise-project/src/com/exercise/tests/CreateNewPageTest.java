@@ -13,6 +13,6 @@ public class CreateNewPageTest extends TestSetupAndTearDown {
 		LoginFactory loginFactory = new LoginFactory(driver);
 		loginFactory.login();
 
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 }
