@@ -1,7 +1,7 @@
 /**
- * Domain classes used to produce
  * <p>
- * There classes contain the 
+ * There classes contain WebElement locations and method for actions as page factories for Confluence testing 
+ * extending POM concept
  * </p>
  */
 /**

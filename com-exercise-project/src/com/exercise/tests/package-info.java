@@ -1,7 +1,6 @@
 /**
- * Domain classes used to produce
  * <p>
- * There classes contain the 
+ * There classes contain the automation tests for Confluence testing
  * </p>
  */
 /**

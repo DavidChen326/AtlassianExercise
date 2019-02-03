@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-02-03T02:03:33Z" name="Default suite" finished-at="2019-02-03T02:04:17Z" duration-ms="44350">
+    <groups>
+    </groups>
+    <test started-at="2019-02-03T02:03:33Z" name="Default test" finished-at="2019-02-03T02:04:17Z" duration-ms="44350">
+      <class name="com.exercise.tests.CreateNewPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.exercise.tests.CreateNewPageTest@57250572]" started-at="2019-02-03T02:03:33Z" name="setUp" finished-at="2019-02-03T02:03:39Z" duration-ms="6010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CreateNewPageTests()[pri:0, instance:com.exercise.tests.CreateNewPageTest@57250572]" started-at="2019-02-03T02:03:39Z" name="CreateNewPageTests" finished-at="2019-02-03T02:04:14Z" duration-ms="35739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewPageTests -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.exercise.tests.CreateNewPageTest@57250572]" started-at="2019-02-03T02:04:14Z" name="tearDown" finished-at="2019-02-03T02:04:17Z" duration-ms="2582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.exercise.tests.CreateNewPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

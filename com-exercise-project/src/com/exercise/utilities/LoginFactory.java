@@ -9,7 +9,7 @@ public class LoginFactory {
 
 	WebDriver driver;
 
-	public void login() {
+	public void login() throws InterruptedException {
 		driver.get("https://excerise.atlassian.net/wiki/");
 		String username = "chenzheng0326@gmail.com";
 		String password = "m4a1Zheng0326";

@@ -1,8 +1,11 @@
 package com.exercise.pagefactories;
 
-import org.openqa.selenium.Keys;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,7 +23,7 @@ public class NewPageFactory {
 		@FindBy(id = "rte-button-restrictions")
 		WebElement restrictionsButton;
 		
-		@FindBy(id = "select2-drop-mask")
+		@FindBy(id = "s2id_page-restrictions-dialog-selector")
 		WebElement restrictionsDropDown;
 		
 		@FindBy(id = "page-restrictions-dialog-save-button")
@@ -30,14 +33,10 @@ public class NewPageFactory {
 		WebElement publishButton;
 		
 	//steps
-		public String getTitle() {
-			WebDriverWait wait = new WebDriverWait(driver, 5);
+		public WebElement typePageTitle() {
+			WebDriverWait wait = new WebDriverWait(driver, 10);
 			WebElement pageTitle = wait.until(ExpectedConditions.visibilityOf(pageTitleTextBox));
-			return pageTitle.toString();
-		}
-
-		public void typePageTitle() {
-			pageTitleTextBox.sendKeys("An Example Page");
+			return pageTitle;
 		}
 		
 		public void putRestrictionsOnPage() {
@@ -45,9 +44,15 @@ public class NewPageFactory {
 		}
 		
 		public void selectRestrictionType() {
-			restrictionsDropDown.click();
-			restrictionsDropDown.sendKeys(Keys.ARROW_DOWN);
-			restrictionsDropDown.sendKeys(Keys.ENTER);
+			
+			//select second option from dropdown
+			Actions act = new Actions(driver);
+			act.click(restrictionsDropDown).build().perform();
+			List<WebElement> options = driver.findElements(By.id("select2-drop"));
+			for (WebElement option : options) {
+				if ("Editing restricted".equals(option.getText()));
+				option.click();
+			}
 		}
 		
 		public void saveRestrictions() {

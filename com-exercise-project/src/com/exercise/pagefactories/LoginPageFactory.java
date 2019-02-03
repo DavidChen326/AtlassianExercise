@@ -13,13 +13,12 @@ public class LoginPageFactory {
 		@FindBy(id = "username")
 		WebElement usernameTextBox;
 	
+		@FindBy(xpath = "//*[@id=\"password\"]")
+		WebElement passwordTextBox;
+
 		@FindBy(id = "login-submit")
 		WebElement loginButton;
 		
-		@FindBy(id = "password")
-		WebElement passwordTextBox;
-
-
 
 	//steps
 		public void setUserName(String username) {
@@ -36,9 +35,10 @@ public class LoginPageFactory {
 
 
 	// actions
-		public void logIn(String username, String password) {
+		public void logIn(String username, String password) throws InterruptedException{
 			setUserName(username);
 			clickSubmit();
+			Thread.sleep(2000);
 			setPassword(password);
 			clickSubmit();
 		}

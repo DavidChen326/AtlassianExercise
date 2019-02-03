@@ -16,13 +16,13 @@ public class TestSetupAndTearDown {
 		String browserType = "firefox";
 		driver = com.exercise.utilities.DriverFactory.open(browserType);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
 	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(2000);
 		driver.close();
-		System.out.println("Test Is Completed");
+		System.out.println("Test Completed");
 	}
 }
