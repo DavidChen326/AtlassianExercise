@@ -1,8 +1,9 @@
 Pre-requisites:
 1. Eclipse for Mac - 64 bit installed on test terminal
 2. Java 10 installed on test terminal
-3. Download geckodriver (default) and update the path in class ‚ÄúDriverFactory‚Äù, chromedriver and IEDriverServer are optional for running cross-browser testing
+3. Download geckodriver (default) and update the path in class ìDriverFactoryî, chromedriver and IEDriverServer are optional for running cross-browser testing
 4. Install TestNG in Eclipse - http://beust.com/eclipse
+5. Clone this repo by importing to Eclipse, if error shows after imported, run a quick fix by right clicking the error
 
 Assumptions:
 1. Network speed is normal on test terminal
